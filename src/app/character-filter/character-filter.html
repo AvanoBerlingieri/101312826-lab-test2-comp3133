@@ -1,0 +1,13 @@
+<div class="character-filter">
+  <mat-form-field appearance="outline">
+    <mat-label>Filter by House</mat-label>
+
+    <mat-select (selectionChange)="onHouseChange($event.value)">
+      <mat-option value="all">All Characters</mat-option>
+
+      @for (house of houses; track house) {
+        <mat-option [value]="house">{{ house }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+</div>

@@ -13,7 +13,7 @@ export class Service {
   }
 
   getAllCharactersInHouse(house: string): Observable<Character[]> {
-    return this.http.get<Character[]>(`${this.apiUrl}/house/${house}`);
+    return this.http.get<Character[]>(`${this.apiUrl}/characters/house/${house}`);
   }
 
   getCharacterById(id: string): Observable<Character> {

@@ -1,3 +1,5 @@
+<app-character-filter (selectedHouse)="onFilterChanged($event)"></app-character-filter>
+
 <div class="character-container">
   @for (char of characters(); track char.id){
     <mat-card class="character-card">
