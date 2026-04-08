@@ -1,0 +1,16 @@
+<div class="character-container">
+  @for (char of characters(); track char.id){
+    <mat-card class="character-card">
+      <img mat-card-image [src]="char.image" alt="character image">
+
+      <mat-card-content>
+        <h2>{{char.name}}</h2>
+
+        <p>{{char.house}}</p>
+      </mat-card-content>
+    </mat-card>
+  } @empty {
+    <p>Loading Characters. Please wait</p>
+  }
+
+</div>
