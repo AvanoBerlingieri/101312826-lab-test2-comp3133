@@ -19,4 +19,15 @@ Once the server is running, open your browser and navigate to `http://localhost:
 
 ## Deployment
 This application is deployed on Vercel
+
 https://101312826-lab-test2-comp3133.vercel.app/
+
+## Screenshots 
+### Character List:
+![CharacterList.png](screenshots/CharacterList.png)
+
+### Characters filtered by house:
+![CharactersFiltered.png](screenshots/CharactersFiltered.png)
+
+### Character details:
+![CharacterDetails.png](screenshots/CharacterDetails.png)
