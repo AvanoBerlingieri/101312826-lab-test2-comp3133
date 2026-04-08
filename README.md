@@ -16,3 +16,7 @@ Harry Potter characters using the public REST API from https://hp-api.onrender.c
 To start a local development server, run:
 ng serve
 Once the server is running, open your browser and navigate to `http://localhost:4200/`
+
+## Deployment
+This application is deployed on Vercel
+https://101312826-lab-test2-comp3133.vercel.app/
