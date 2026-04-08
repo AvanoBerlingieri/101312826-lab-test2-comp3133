@@ -1,0 +1,23 @@
+@if (character(); as char) {
+  <div class="details-container">
+
+    <div class="image-container">
+      <img [src]="char.image" alt="character image">
+    </div>
+
+    <div class="info-container">
+      <h1>{{ char.name }}</h1>
+      <p>House: {{ char.house }}</p>
+      <p>Actor: {{ char.actor }}</p>
+      <p>Wizard: {{ char.wizard }}</p>
+      <p>Species: {{ char.species }}</p>
+      <p>Ancestry: {{ char.ancestry }}</p>
+      <p>Wand Wood:{{ char.wand.wood }}</p>
+      <p>Wand Core:{{ char.wand.core }}</p>
+      <p>Wand Length: {{ char.wand.length }}</p>
+    </div>
+
+  </div>
+} @else {
+  <p>Loading Character Details</p>
+}

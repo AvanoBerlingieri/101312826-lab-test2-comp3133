@@ -3,6 +3,7 @@ import {Service} from '../services/service'
 import {Character} from '../models/character';
 import { MatCardModule } from '@angular/material/card';
 import { CharacterFilter } from '../character-filter/character-filter';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-character-list',
@@ -11,16 +12,20 @@ import { CharacterFilter } from '../character-filter/character-filter';
   styleUrl: './character-list.css',
 })
 export class CharacterList implements OnInit {
-
+  private router = inject(Router);
   private service = inject(Service);
-  characters = signal<Character[]>([])
+  characters = signal<Character[]>([]);
 
   ngOnInit(): void {
-    this.loadCharacters()
+    this.loadCharacters();
   }
 
   loadCharacters() {
-    this.service.getAllCharacters().subscribe(data => this.characters.set(data))
+    this.service.getAllCharacters().subscribe((data) => this.characters.set(data));
+  }
+
+  viewCharacterDetails(id: string) {
+    this.router.navigate(['/character', id]);
   }
 
   onFilterChanged(house: string) {

@@ -2,7 +2,7 @@
 
 <div class="character-container">
   @for (char of characters(); track char.id){
-    <mat-card class="character-card">
+    <mat-card class="character-card" (click)="viewCharacterDetails(char.id)">
       <img mat-card-image [src]="char.image" alt="character image">
 
       <mat-card-content>
