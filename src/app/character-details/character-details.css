@@ -4,14 +4,12 @@
   padding: 40px;
 }
 
-.image-container {
-  flex: 1;
-}
-
 .image-container img {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  min-height: 400px;
+  max-height: 600px;
 }
 
 .info-container {
